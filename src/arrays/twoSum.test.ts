@@ -1,4 +1,4 @@
-import { twoSum } from '../src/twoSum';
+import { twoSum } from './twoSum';
 
 describe('twoSum', () => {
     it('should return indices of the two numbers that add up to the target', () => {
