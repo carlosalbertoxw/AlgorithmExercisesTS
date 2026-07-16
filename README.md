@@ -6,21 +6,22 @@ Cada ejercicio es una función pura documentada con JSDoc (incluyendo su complej
 
 ## Requisitos
 
-- [Node.js](https://nodejs.org/) 18 o superior (incluye npm)
+- [Node.js](https://nodejs.org/) 18 o superior
+- [pnpm](https://pnpm.io/) 11 o superior
 
 ## Instalación
 
 ```bash
-npm install
+pnpm install
 ```
 
 ## Uso
 
 ```bash
-npm test              # Ejecuta todas las pruebas
-npm run test:watch    # Ejecuta las pruebas en modo watch
-npm run test:coverage # Ejecuta las pruebas con reporte de cobertura
-npm run typecheck     # Verifica los tipos sin compilar
+pnpm test              # Ejecuta todas las pruebas
+pnpm test:watch        # Ejecuta las pruebas en modo watch
+pnpm test:coverage     # Ejecuta las pruebas con reporte de cobertura
+pnpm typecheck         # Verifica los tipos sin compilar
 ```
 
 ## Estructura del proyecto
@@ -44,7 +45,7 @@ src/
 
 1. Crea la solución en `src/<categoría>/<nombreEjercicio>.ts`, exportando una función con nombre. Documéntala con JSDoc: qué hace, la estrategia usada y su complejidad.
 2. Crea las pruebas al lado, en `src/<categoría>/<nombreEjercicio>.test.ts`, importando la función con ruta relativa (`./<nombreEjercicio>`). Cubre el caso típico, los casos borde y el caso sin solución.
-3. Ejecuta `npm test` y `npm run typecheck` para verificar que todo pasa.
+3. Ejecuta `pnpm test` y `pnpm typecheck` para verificar que todo pasa.
 4. Agrega el ejercicio a la tabla del [índice](#índice-de-ejercicios).
 
 Si el ejercicio pertenece a una categoría nueva (por ejemplo `strings`, `linked-lists`, `dynamic-programming`), simplemente crea la carpeta en `src/` y `tests/`.
