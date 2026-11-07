@@ -1,5 +1,5 @@
 /**
- * Two Sum (LeetCode #1)
+ * Two Sum (LeetCode #1) — https://leetcode.com/problems/two-sum/
  *
  * Dado un arreglo de números y un objetivo, devuelve los índices de los dos
  * números que suman el objetivo. Si no existe tal par, devuelve un arreglo vacío.
@@ -16,14 +16,13 @@
 export function twoSum(nums: number[], target: number): number[] {
     const seen = new Map<number, number>();
 
-    for (let i = 0; i < nums.length; i++) {
-        const complement = target - nums[i];
-        const complementIndex = seen.get(complement);
+    for (const [i, num] of nums.entries()) {
+        const complementIndex = seen.get(target - num);
         if (complementIndex !== undefined) {
             return [complementIndex, i];
         }
-        if (!seen.has(nums[i])) {
-            seen.set(nums[i], i);
+        if (!seen.has(num)) {
+            seen.set(num, i);
         }
     }
 
